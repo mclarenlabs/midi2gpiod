@@ -1,0 +1,14 @@
+[Unit]
+Description=MIDI2GPIOD Convert MIDI Note on/off and to GPIO pin on/off
+After=network.target
+
+[Service]
+ExecStart=/home/pi/git/midi2gpiod/midi2gpiod -v
+WorkingDirectory=/home/pi
+StandardOutupt=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
